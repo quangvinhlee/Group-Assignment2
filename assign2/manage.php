@@ -1,3 +1,7 @@
+<body>
+    
+<html>
+
 <?php
    if (!isset($_SESSION["username"]))
     header("location: manager-sign-in.php");
@@ -271,9 +275,13 @@ if (isset($_POST["action"]) && $_POST["action"] === "Change EOI Status") {
 
     mysqli_close($connection);
 }
-   <?php 
-   include "footer.inc"; 
+
+   
+      
    ?>
+   <?php>include "footer.inc"; 
+   ?>
+
 </body>
 </html>
     

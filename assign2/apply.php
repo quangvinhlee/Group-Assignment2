@@ -75,17 +75,18 @@
 
 
 <fieldset>
-	<legend>Skill list:</legend>
-	<label for="skill1">Project Management</label>
-    <input type="checkbox" id="skill1" name="skill[]" value="">
+    <legend>Skill list:</legend>
+    <label for="skill1">Project Management</label>
+    <input type="checkbox" id="skill1" name="skill[]" value="Project Management">
     <label for="skill2">Front-end Development</label>
-    <input type="checkbox" id="skill2" name="skill[]" value="">
+    <input type="checkbox" id="skill2" name="skill[]" value="Front-end Development">
     <label for="skill3">Back-end Development</label>
-    <input type="checkbox" id="skill3" name="skill[]" value="">
+    <input type="checkbox" id="skill3" name="skill[]" value="Back-end Development">
     <label for="skill4">Object Oriented Programming</label>
-    <input type="checkbox" id="skill4" name="skill[]" value="">
-    <label for="comments">Other Skills </label><br>
-    <textarea id="comments" name="comments" rows="4" cols="40" placeholder= "Write description of your skills here."></textarea>
+    <input type="checkbox" id="skill4" name="skill[]" value="Object Oriented Programming">
+    <label for="skill5">Other Skills</label>
+    <input type="checkbox" id="skill5" name="skill[]" value="Other Skills">
+    <textarea id="other_skills" name="other_skills"></textarea>
 </fieldset>
 
 
