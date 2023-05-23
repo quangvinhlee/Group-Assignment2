@@ -277,10 +277,11 @@ if (isset($_POST["action"]) && $_POST["action"] === "Change EOI Status") {
 }
 
    
-      
+   <?php 
+   include "footer.inc"; 
+   ?>   
    ?>
-   <?php>include "footer.inc"; 
-   ?>
+   
 
 </body>
 </html>

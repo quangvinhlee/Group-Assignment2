@@ -85,13 +85,13 @@
     <label for="skill4">Object Oriented Programming</label>
     <input type="checkbox" id="skill4" name="skill[]" value="Object Oriented Programming">
     <label for="skill5">Other Skills</label>
-    <input type="checkbox" id="skill5" name="skill[]" value="Other Skills">
+    <input type="checkbox" id="skill5" name="otherskill" value="Other Skills">
     <textarea id="other_skills" name="other_skills"></textarea>
 </fieldset>
 
 
 
-<input type="submit" value="Submit">
+<input type="submit" name="submit" value="Submit">
 
 </form>
   
