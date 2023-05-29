@@ -12,7 +12,8 @@
 <body>
 	<div>
 		<?php 
-			include 'header.inc'
+			include 'header.inc';
+			include 'menu.inc'
 		?>
 
 <section>

@@ -84,23 +84,24 @@ span.psw {
 <body>
 
 
-<form action="./manage.html" method="get">
+<form action="login_process.php" method="post">
   <h2>Manager Login</h2>
   <div class="imgcontainer">
-    <img src="manage_avatar2.png" alt="Avatar" class="avatar">
+    <img src="../images/manage_avatar2.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" id="username" required>
+    <!-- <div id="username_error">Please fill up your username</div> -->
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+    <!-- <div id="pass _error">Please fill up your username</div> -->
         
+    
+    <!-- <a id="login" href="manage.html"></a> -->
     <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
@@ -108,6 +109,8 @@ span.psw {
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
+
+<!-- <script src="validate.js"></script> -->
 
 </body>
 </html>
