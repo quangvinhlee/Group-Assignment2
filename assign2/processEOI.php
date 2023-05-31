@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     // Redirect to the appropriate page or display an error message
-    header("Location: index.php");
-    exit();
+    header("Location: apply.php");
+    exit();    
 }
 
 // Define the sanitizeInput function
@@ -24,10 +24,10 @@ if (!$conn) {
     $First_Name = trim($_POST["first_name"]);
     $Last_Name = trim($_POST["last_name"]);
     $Date_of_birth = trim($_POST["dob"]);
-    $Gender = trim($_POST["gender"]);
+    $Gender = isset($_POST["gender"]) ? sanitizeInput($_POST["gender"]) : '';
     $Street_Address = trim($_POST["street_address"]);
     $Suburb = trim($_POST["suburb_town"]);
-    $State = trim($_POST["state"]);
+    $State = isset($_POST["state"]) ? sanitizeInput($_POST["state"]) : '';
     $PostCode = trim($_POST["postcode"]);
     $Email = trim($_POST["email"]);
     $Phone = trim($_POST["phone"]);
