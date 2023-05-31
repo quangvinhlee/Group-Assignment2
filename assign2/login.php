@@ -1,154 +1,120 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Registration system PHP and MySQL</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../styles/styles.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {
+  
+  text-align: center;
+	background-color: #DAAD86 ;
+  
+  
+  border: 3px solid #ffe5ac;}
 
-    <style>
-        * { margin: 0px; padding: 0px; }
-body {
-	font-size: 120%;
-	background: #F8F8FF;
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
-.header {
-	width: 40%;
-	margin: 50px auto 0px;
-	color: white;
-	background: #5F9EA0;
-	text-align: center;
-	border: 1px solid #B0C4DE;
-	border-bottom: none;
-	border-radius: 10px 10px 0px 0px;
-	padding: 20px;
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
-form, .content {
-	width: 40%;
-	margin: 0px auto;
-	padding: 20px;
-	border: 1px solid #B0C4DE;
-	background: white;
-	border-radius: 0px 0px 10px 10px;
+
+button:hover {
+  opacity: 0.8;
 }
-.input-group {
-	margin: 10px 0px 10px 0px;
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #ab5f5a;
 }
-.input-group label {
-	display: block;
-	text-align: left;
-	margin: 3px;
+
+.imgcontainer {
+
+
+  padding-left: 25%;
+
+  align-items: center;
+  width: 50%;
+  margin: 24px 0 12px 0;
+
 }
-.input-group input {
-	height: 30px;
-	width: 93%;
-	padding: 5px 10px;
-	font-size: 16px;
-	border-radius: 5px;
-	border: 1px solid gray;
+
+img.avatar {
+
+  width: 40%;
+  border-radius: 50%;
 }
-#user_type {
-	height: 40px;
-	width: 98%;
-	padding: 5px 10px;
-	background: white;
-	font-size: 16px;
-	border-radius: 5px;
-	border: 1px solid gray;
+
+.container {
+  padding: 16px;
+  padding-right: 25%;
+  padding-left: 25%;
 }
-.btn {
-	padding: 10px;
-	font-size: 15px;
-	color: white;
-	background: #5F9EA0;
-	border: none;
-	border-radius: 5px;
+
+span.psw {
+  float: right;
+  padding-top: 16px;
 }
-.error {
-	width: 92%; 
-	margin: 0px auto; 
-	padding: 10px; 
-	border: 1px solid #a94442; 
-	color: #a94442; 
-	background: #f2dede; 
-	border-radius: 5px; 
-	text-align: left;
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
 }
-.success {
-	color: #3c763d; 
-	background: #dff0d8; 
-	border: 1px solid #3c763d;
-	margin-bottom: 20px;
-}
-.profile_info img {
-	display: inline-block; 
-	width: 50px; 
-	height: 50px; 
-	margin: 5px;
-	float: left;
-}
-.profile_info div {
-	display: inline-block; 
-	margin: 5px;
-}
-.profile_info:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-    </style>
+</style>
 </head>
 <body>
-
-
-<div class="header">
-	<h2>Register</h2>
+<div>
+<?php 
+	include 'header.inc';
+	include 'menu.inc';
+?>
 </div>
-    <form method="post" action="register.php">
- 
-        <div class="input-group">
-            <label>Username</label>
-            <input type="text" name="username" value="">
-        </div>
-        <div class="input-group">
-            <label>Email</label>
-            <input type="email" name="email" value="">
-        </div>
-        <div class="input-group">
-            <label>Password</label>
-            <input type="password" name="password_1">
-        </div>
-        <div class="input-group">
-            <label>Confirm password</label>
-            <input type="password" name="password_2">
-        </div>
-        <div class="input-group">
-            <button type="submit" class="btn" name="register_btn">Register</button>
-        </div>
-        <p>
-            Already a member? <a href="login.php">Sign in</a>
-        </p>
-    </form>
-</body>
-</html> -->
+<form action="login_process.php" method="post">
+  <h2>Manager Login</h2>
+  <div class="imgcontainer">
+    <img src="../images/manage_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" id="username" required>
+    <!-- <div id="username_error">Please fill up your username</div> -->
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+    <!-- <div id="pass _error">Please fill up your username</div> -->
+        
+    
+    <!-- <a id="login" href="manage.html"></a> -->
+    <button type="submit">Login</button>
+  </div>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-</head>
-<body>
-    <h2>Login</h2>
-    <form action="login_process.php" method="POST">
-        <label for="username">Username: </label>
-        <input type="text" name="username" id="username" required>
+</form>
 
-        <label for="password">Password: </label>
-        <input type="password" name="password" id="password" required>
+<?php 
+	include 'footer.inc'
+?>
 
-        <input type="submit" value="Login">
-
-    </form>
 </body>
 </html>

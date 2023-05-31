@@ -1222,6 +1222,45 @@ margin-left: 100px;
   }
 }
 
+.manage h2 {
+	font-size:40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.manage h3 {
+		font-size: 25px;
+		color:#523b13;
+		text-align: left;
+		margin: 20px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+			margin-top: 20px;
+			padding: 20px;
+	}
+
+	.manage value {
+		font-size: normal;
+		color:#000000;
+		text-align: right;
+		border-radius: 20px 20px;
+		background-color: #643f0047;
+		display: flex;
+	}
+
+	.manage body{
+		background-color: #007bff57;
+
+	}
+	.manage form{
+		background-color: #8a6a3477;
+
+	}
+		
+	
+  
 
 	
   
